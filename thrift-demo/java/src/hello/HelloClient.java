@@ -14,5 +14,7 @@ public class HelloClient {
 		transport.open();
 		String result = client.hello("World");
 		System.out.println(result);
+
+		System.out.println(client.helloV2(new Person()));
 	}
 }

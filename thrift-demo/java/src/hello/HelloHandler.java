@@ -6,6 +6,10 @@ public class HelloHandler implements HelloService.Iface {
 	}
 
 	public String hello(String name) {
-		return "Hello, " + name;
+		return "Hello, " + name + "!";
 	}
+
+    public String helloV2(Person person) {
+        return "Hello, " + person.getLastName() + " " + person.getFirstName() + "!";
+    }
 }
