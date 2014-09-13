@@ -1,8 +1,6 @@
-namespace java demo
+namespace java hello
 
-service DemoService {
+service HelloService {
 	void ping();
 	string hello(1:string name);
 }
-
-
