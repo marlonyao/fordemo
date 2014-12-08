@@ -1,8 +1,9 @@
 namespace java hello
+namespace php Hello
 
 struct Person {
-    2:string lastName;
     1:string firstName;
+    2:string lastName;
 }
 
 service HelloService {

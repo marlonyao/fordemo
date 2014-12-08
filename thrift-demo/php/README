@@ -1,0 +1,23 @@
+1. ant gen-php
+
+2. 配置apache
+
+<VirtualHost *:80>
+    ServerName www.phpthriftserver.dev.sankuai.com
+    ServerAlias *.phpthriftserver.dev.sankuai.com
+    DocumentRoot /home/yaolei/fordemo/thrift-php-server
+    RewriteEngine on
+    RewriteRule ^/(.*)$ /index.php [L]
+    ErrorLog /var/sankuai/wwwlogs/phpthriftserver.error.log
+    LogLevel warn
+    CustomLog /var/sankuai/wwwlogs/phpthriftserver.access.log combined
+    SetEnv USER yaolei
+</VirtualHost>
+
+3. service apache2 reload
+
+4. 配置/etc/hosts
+
+192.168.2.182 ubuntu www.phpthriftserver.dev.sankuai.com
+
+

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<project name="thrift-demo" default="gen-php" basedir=".">
+    
+    <description>Thrift Demo</description>
+    <property name="resource.dir" location="../resource" />
+
+    <target name="gen-php">
+        <exec executable="thrift" failonerror="true">
+            <arg line="--gen php:server ${resource.dir}/hello.thrift" />
+        </exec>
+    </target>
+
+    <target name="clean">
+        <delete dir="gen-php" />
+    </target>
+</project>
